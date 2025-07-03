@@ -1,0 +1,46 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/jammy64"
+  base_ip = "192.168.56."
+
+  apps = {
+    "nginx"         => ["provision/provision-nginx.sh", 80],
+    "apache"        => ["provision/provision-apache.sh", 8080],
+    "mariadb"       => ["provision/provision-mariadb.sh", 3306],
+    "redis"         => ["provision/provision-redis.sh", 6379],
+    "elk"           => ["provision/provision-elk.sh", 5601],      # Kibana UI
+    "mongo"         => ["provision/provision-mongo.sh", 27017],
+    "postgres"      => ["provision/provision-postgres.sh", 5432],
+    "rabbitmq"      => ["provision/provision-rabbitmq.sh", 15672], # mgmt UI
+    "consul"        => ["provision/provision-consul.sh", 8500],
+    "vault"         => ["provision/provision-vault.sh", 8200],
+    "grafana"       => ["provision/provision-grafana.sh", 3000],
+    "influxdb"      => ["provision/provision-influxdb.sh", 8086],
+    "prometheus"    => ["provision/provision-prometheus.sh", 9090],
+    "minio"         => ["provision/provision-minio.sh", 9000]      # MinIO API (9001 for console)
+  }
+
+  apps.each_with_index do |(name, (script, port)), i|
+    config.vm.define name do |vm|
+      vm.vm.hostname = "#{name}.local"
+      vm.vm.network "private_network", ip: "#{base_ip}#{10 + i}"
+
+      # Forward port from guest to host
+      vm.vm.network "forwarded_port", guest: port, host: port, auto_correct: true
+
+      vm.vm.provision "shell", path: script
+
+      vm.vm.provider "virtualbox" do |vb|
+        vb.memory = 768
+        vb.cpus = 1
+      end
+    end
+  end
+end
+
+# "provision/provision-nginx.sh" "provision/provision-apache.sh" "provision/provision-mariadb.sh" "provision/provision-redis.sh" "provision/provision-elk.sh" "provision/provision-mongo.sh" "provision/provision-postgres.sh" "provision/provision-rabbitmq.sh" "provision/provision-consul.sh" "provision/provision-vault.sh" "provision/provision-grafana.sh" "provision/provision-influxdb.sh" "provision/provision-prometheus.sh" "provision/provision-minio.sh"
+
+
+
+
+
+# end

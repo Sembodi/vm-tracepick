@@ -1,0 +1,85 @@
+digraph G {
+  rankdir=LR;
+  node [shape=box, fontname=Helvetica];
+  "lib/helpers/vmHelpers/traceHelper";
+  "lib/helpers/optionalHelpers/bindepHelper";
+  "lib/helpers/vmHelpers/osHelper";
+  "lib/fileparsers/lineparse";
+  "lib/helpers/fsHelper";
+  "lib/helpers/vmHelpers/packageHelper";
+  "lib/fileparsers/bpfparse";
+  "lib/fileparsers/pathparse";
+  "lib/collectors/bpfcollector";
+  "lib/helpers/vmHelpers/serviceHelper";
+  "lib/helpers/dockerHelpers/imagesearchHelper";
+  "lib/collectors/etccollector";
+  "lib/helpers/dockerHelpers/runHelper";
+  "lib/helpers/vmHelpers/etcvarHelper";
+  "lib/helpers/vmHelpers/portHelper";
+  "lib/helpers/artifactHelper";
+  "lib/helpers/dockerHelpers/mergeHelper";
+  subgraph cluster_0 {
+    label="lib/helpers";
+    "lib/helpers/vmHelpers/serviceHelper";
+    "lib/helpers/dockerHelpers/imagesearchHelper";
+    "lib/helpers/dockerHelpers/runHelper";
+    "lib/helpers/vmHelpers/etcvarHelper";
+    "lib/helpers/vmHelpers/portHelper";
+    "lib/helpers/artifactHelper";
+    "lib/helpers/dockerHelpers/mergeHelper";
+    "lib/helpers/vmHelpers/traceHelper";
+    "lib/helpers/optionalHelpers/bindepHelper";
+    "lib/helpers/vmHelpers/osHelper";
+    "lib/helpers/fsHelper";
+    "lib/helpers/vmHelpers/packageHelper";
+  }
+  subgraph cluster_1 {
+    label="lib/collectors";
+    "lib/collectors/etccollector";
+    "lib/collectors/bpfcollector";
+  }
+  subgraph cluster_2 {
+    label="lib/fileparsers";
+    "lib/fileparsers/lineparse";
+    "lib/fileparsers/bpfparse";
+    "lib/fileparsers/pathparse";
+  }
+  "lib/fileparsers/pathparse" -> "lib/fileparsers/lineparse";
+  "lib/helpers/dockerHelpers/imagesearchHelper" -> "lib/helpers/fsHelper";
+  "lib/helpers/dockerHelpers/imagesearchHelper" -> "lib/fileparsers/lineparse";
+  "lib/helpers/vmHelpers/etcvarHelper" -> "lib/fileparsers/lineparse";
+  "lib/helpers/vmHelpers/etcvarHelper" -> "lib/helpers/fsHelper";
+  "lib/helpers/vmHelpers/osHelper" -> "lib/helpers/fsHelper";
+  "lib/helpers/vmHelpers/osHelper" -> "lib/fileparsers/lineparse";
+  "lib/helpers/vmHelpers/traceHelper" -> "lib/helpers/fsHelper";
+  "lib/helpers/vmHelpers/traceHelper" -> "lib/helpers/vmHelpers/serviceHelper";
+  "lib/helpers/vmHelpers/packageHelper" -> "lib/fileparsers/lineparse";
+  "lib/helpers/vmHelpers/packageHelper" -> "lib/helpers/fsHelper";
+  "lib/helpers/vmHelpers/packageHelper" -> "lib/helpers/optionalHelpers/bindepHelper";
+  "lib/helpers/vmHelpers/portHelper" -> "lib/helpers/fsHelper";
+  "lib/helpers/vmHelpers/portHelper" -> "lib/fileparsers/lineparse";
+  "lib/helpers/vmHelpers/serviceHelper" -> "lib/helpers/fsHelper";
+  "lib/helpers/vmHelpers/serviceHelper" -> "lib/helpers/vmHelpers/osHelper";
+  "lib/helpers/vmHelpers/serviceHelper" -> "lib/fileparsers/lineparse";
+  "lib/fileparsers/bpfparse" -> "lib/fileparsers/pathparse";
+  "lib/helpers/artifactHelper" -> "lib/fileparsers/lineparse";
+  "lib/helpers/artifactHelper" -> "lib/helpers/vmHelpers/etcvarHelper";
+  "lib/helpers/artifactHelper" -> "lib/helpers/vmHelpers/osHelper";
+  "lib/helpers/artifactHelper" -> "lib/helpers/vmHelpers/traceHelper";
+  "lib/helpers/artifactHelper" -> "lib/collectors/bpfcollector";
+  "lib/helpers/artifactHelper" -> "lib/fileparsers/pathparse";
+  "lib/helpers/artifactHelper" -> "lib/helpers/fsHelper";
+  "lib/helpers/artifactHelper" -> "lib/helpers/vmHelpers/portHelper";
+  "lib/helpers/artifactHelper" -> "lib/helpers/vmHelpers/packageHelper";
+  "lib/helpers/artifactHelper" -> "lib/helpers/vmHelpers/serviceHelper";
+  "lib/helpers/artifactHelper" -> "lib/helpers/dockerHelpers/imagesearchHelper";
+  "lib/helpers/artifactHelper" -> "lib/collectors/etccollector";
+  "lib/helpers/dockerHelpers/mergeHelper" -> "lib/fileparsers/lineparse";
+  "lib/helpers/dockerHelpers/mergeHelper" -> "lib/helpers/fsHelper";
+  "lib/helpers/optionalHelpers/bindepHelper" -> "lib/fileparsers/lineparse";
+  "lib/helpers/optionalHelpers/bindepHelper" -> "lib/helpers/fsHelper";
+  "lib/collectors/bpfcollector" -> "lib/fileparsers/bpfparse";
+  "lib/collectors/bpfcollector" -> "lib/fileparsers/pathparse";
+  "lib/collectors/etccollector" -> "lib/fileparsers/pathparse";
+  "lib/fileparsers/lineparse" -> "lib/helpers/fsHelper";
+}

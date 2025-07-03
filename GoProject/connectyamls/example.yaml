@@ -1,0 +1,3 @@
+name:
+  ssh_connection: "root@localhost:12323" 
+  ssh_identity: "/path/to/ssh/key"

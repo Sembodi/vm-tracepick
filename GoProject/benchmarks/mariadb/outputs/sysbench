@@ -1,0 +1,71 @@
+VM:
+
+Threads: 1 | Avg TPS: 3035.33 | Avg Latency: 1.64 ms | Avg Errors: 0
+Threads: 2 | Avg TPS: 2981.66 | Avg Latency: 3.35 ms | Avg Errors: 0
+Threads: 4 | Avg TPS: 2830.66 | Avg Latency: 7.07 ms | Avg Errors: 0
+Threads: 8 | Avg TPS: 2676.00 | Avg Latency: 14.97 ms | Avg Errors: 0
+
+  SQL statistics:
+      queries performed:
+          read:                            82138
+          write:                           23468
+          other:                           11734
+          total:                           117340
+      transactions:                        5867   (586.52 per sec.)
+      queries:                             117340 (11730.38 per sec.)
+      ignored errors:                      0      (0.00 per sec.)
+      reconnects:                          0      (0.00 per sec.)
+
+  General statistics:
+      total time:                          10.0009s
+      total number of events:              5867
+
+  Latency (ms):
+           min:                                    1.13
+           avg:                                    1.70
+           max:                                   19.41
+           95th percentile:                        2.43
+           sum:                                 9984.39
+
+  Threads fairness:
+      events (avg/stddev):           5867.0000/0.00
+      execution time (avg/stddev):   9.9844/0.00
+
+Docker:
+
+Threads: 1 | Avg TPS: 920.66 | Avg Latency: 5.43 ms | Avg Errors: 0
+Threads: 2 | Avg TPS: 896.33 | Avg Latency: 11.15 ms | Avg Errors: 0
+Threads: 4 | Avg TPS: 688.66 | Avg Latency: 29.28 ms | Avg Errors: 0
+Threads: 8 | Avg TPS: 1054.00 | Avg Latency: 38.27 ms | Avg Errors: 0
+  SQL statistics:
+      queries performed:
+          read:                            23954
+          write:                           6844
+          other:                           3422
+          total:                           34220
+      transactions:                        1711   (171.03 per sec.)
+      queries:                             34220  (3420.65 per sec.)
+      ignored errors:                      0      (0.00 per sec.)
+      reconnects:                          0      (0.00 per sec.)
+
+  General statistics:
+      total time:                          10.0020s
+      total number of events:              1711
+
+  Latency (ms):
+           min:                                    4.68
+           avg:                                    5.84
+           max:                                   10.40
+           95th percentile:                        7.04
+           sum:                                 9991.09
+
+  Threads fairness:
+      events (avg/stddev):           1711.0000/0.00
+      execution time (avg/stddev):   9.9911/0.00
+
+Min-Docker:
+
+Threads: 1 | Avg TPS: 807.00 | Avg Latency: 6.29 ms | Avg Errors: 0
+Threads: 2 | Avg TPS: 687.66 | Avg Latency: 14.61 ms | Avg Errors: 0
+Threads: 4 | Avg TPS: 415.33 | Avg Latency: 48.49 ms | Avg Errors: 0
+Threads: 8 | Avg TPS: 287.66 | Avg Latency: 140.64 ms | Avg Errors: 0

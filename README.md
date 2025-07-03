@@ -1,1 +1,1 @@
-# vm-tracepick
+# See README in ./GoProject/

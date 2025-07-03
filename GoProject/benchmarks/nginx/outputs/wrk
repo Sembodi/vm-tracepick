@@ -1,0 +1,144 @@
+VM:
+
+  1 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   518.05us  571.66us  19.18ms   95.93%
+    Req/Sec    20.91k     2.44k   23.31k    91.09%
+  210121 requests in 10.10s, 172.12MB read
+Requests/sec:  20802.14
+Transfer/sec:     17.04MB
+
+  1 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     2.47ms    1.16ms  58.46ms   95.63%
+    Req/Sec    20.64k     2.24k   23.21k    87.13%
+  207317 requests in 10.10s, 169.83MB read
+Requests/sec:  20522.81
+Transfer/sec:     16.81MB
+
+  1 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.46ms    7.72ms 231.27ms   99.14%
+    Req/Sec    20.30k     2.12k   22.06k    87.13%
+  203911 requests in 10.10s, 167.04MB read
+Requests/sec:  20183.43
+Transfer/sec:     16.53MB
+
+  1 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    84.81ms  148.99ms 746.96ms   83.41%
+    Req/Sec    18.25k     3.08k   22.58k    82.00%
+  181480 requests in 10.01s, 148.66MB read
+Requests/sec:  18132.87
+Transfer/sec:     14.85MB
+
+  1 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   220.22ms  400.80ms   1.72s    83.65%
+    Req/Sec    18.48k     2.73k   21.58k    84.00%
+  183724 requests in 10.01s, 150.50MB read
+Requests/sec:  18351.46
+Transfer/sec:     15.03MB
+
+
+
+Docker:
+
+1 threads and 10 connections
+Thread Stats   Avg      Stdev     Max   +/- Stdev
+  Latency     6.28ms   10.97ms  62.69ms   85.28%
+  Req/Sec     5.99k     1.23k    9.51k    70.00%
+59691 requests in 10.02s, 48.90MB read
+Requests/sec:   5957.69
+Transfer/sec:      4.88MB
+
+1 threads and 50 connections
+Thread Stats   Avg      Stdev     Max   +/- Stdev
+  Latency    15.81ms   19.49ms 165.29ms   81.28%
+  Req/Sec     6.18k     1.45k   11.56k    70.00%
+61560 requests in 10.01s, 50.43MB read
+Requests/sec:   6147.97
+Transfer/sec:      5.04MB
+
+1 threads and 100 connections
+Thread Stats   Avg      Stdev     Max   +/- Stdev
+  Latency    22.59ms   22.43ms 106.12ms   80.35%
+  Req/Sec     5.96k     1.37k    9.10k    71.00%
+59609 requests in 10.06s, 48.83MB read
+Requests/sec:   5925.99
+Transfer/sec:      4.85MB
+
+1 threads and 200 connections
+Thread Stats   Avg      Stdev     Max   +/- Stdev
+  Latency    37.15ms   31.02ms 193.04ms   74.14%
+  Req/Sec     5.88k     1.86k    9.53k    67.00%
+58917 requests in 10.08s, 48.26MB read
+Requests/sec:   5846.54
+Transfer/sec:      4.79MB
+
+1 threads and 400 connections
+Thread Stats   Avg      Stdev     Max   +/- Stdev
+  Latency    67.34ms   42.88ms 297.27ms   64.16%
+  Req/Sec     6.00k     2.09k   11.21k    65.00%
+60096 requests in 10.08s, 49.23MB read
+Requests/sec:   5959.12
+Transfer/sec:      4.88MB
+
+1 threads and 800 connections
+Thread Stats   Avg      Stdev     Max   +/- Stdev
+  Latency   124.63ms   98.89ms   1.03s    89.44%
+  Req/Sec     6.78k     1.96k   10.84k    69.70%
+67419 requests in 10.04s, 55.23MB read
+Requests/sec:   6718.31
+Transfer/sec:      5.50MB
+
+
+Min-Docker:
+
+  1 threads and 10 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     5.56ms    9.92ms  53.85ms   85.95%
+    Req/Sec     6.40k     1.23k   11.30k    75.25%
+  64325 requests in 10.10s, 52.69MB read
+Requests/sec:   6368.78
+Transfer/sec:      5.22MB
+
+  1 threads and 50 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    16.11ms   19.52ms  80.86ms   80.66%
+    Req/Sec     6.15k     1.37k   10.88k    70.00%
+  61629 requests in 10.06s, 50.48MB read
+Requests/sec:   6127.70
+Transfer/sec:      5.02MB
+
+  1 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    22.97ms   23.75ms 176.95ms   79.48%
+    Req/Sec     6.12k     1.71k   10.09k    68.00%
+  61304 requests in 10.07s, 50.22MB read
+Requests/sec:   6087.25
+Transfer/sec:      4.99MB
+
+  1 threads and 200 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    35.89ms   28.73ms 173.28ms   69.53%
+    Req/Sec     5.97k     1.56k    9.53k    68.00%
+  59786 requests in 10.07s, 48.97MB read
+Requests/sec:   5934.42
+Transfer/sec:      4.86MB
+
+  1 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    64.29ms   42.42ms 296.35ms   63.91%
+    Req/Sec     6.32k     2.03k   12.86k    73.00%
+  63346 requests in 10.09s, 51.89MB read
+Requests/sec:   6277.62
+Transfer/sec:      5.14MB
+
+  1 threads and 800 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   142.71ms  120.94ms   1.42s    88.75%
+    Req/Sec     6.09k     2.09k   11.91k    67.68%
+  60416 requests in 10.02s, 49.49MB read
+Requests/sec:   6027.23
+Transfer/sec:      4.94MB

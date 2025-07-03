@@ -1,0 +1,69 @@
+VM:
+  Starting mongo-perf benchmark for simple_multi_update test case...
+  @@@START@@@
+  MultiUpdate.Uncontended.SingleDoc.NoIndex
+  	1	3498.4768529360035
+  	1	3236.6172253432287
+  	1	3804.00805155422
+  	2	3820.3257719596286
+  	2	3788.6597938144328
+  	2	3594.361368061127
+  	4	3668.1757810590007
+  	4	3605.672717336113
+  	4	3667.118912072757
+  	8	3651.984621834925
+  	8	3464.0443914418006
+  	8	3511.6074639389462
+  MultiUpdate.Uncontended.SingleDoc.Indexed
+  	1	3408.1639048396723
+  	1	3250.149752800592
+  	1	3340.6022641793143
+  	2	3477.677247181753
+  	2	3474.89028055922
+  	2	3535.758678780217
+  	4	3506.0742546847787
+  	4	3487.246018306394
+  	4	3509.6178429442516
+  	8	3425.4308969039257
+  	8	3278.590254146693
+  	8	3458.441082964436
+  @@@END@@@
+  @@@RESULTS_START@@@
+  {"results":[{"name":"MultiUpdate.Uncontended.SingleDoc.NoIndex","results":{"1":{"ops_per_sec_values":[3498.4768529360035,3236.6172253432287,3804.00805155422],"error_values":[0,0,0],"ops_per_sec":3513.0340432778175,"ops_per_sec_median":3498.4768529360035,"ops_per_sec_stdev":231.8649337582603},"2":{"ops_per_sec_values":[3820.3257719596286,3788.6597938144328,3594.361368061127],"error_values":[0,0,0],"ops_per_sec":3734.448977945063,"ops_per_sec_median":3788.6597938144328,"ops_per_sec_stdev":99.89690477426663},"4":{"ops_per_sec_values":[3668.1757810590007,3605.672717336113,3667.118912072757],"error_values":[0,0,0],"ops_per_sec":3646.9891368226235,"ops_per_sec_median":3667.118912072757,"ops_per_sec_stdev":29.218306275376012},"8":{"ops_per_sec_values":[3651.984621834925,3464.0443914418006,3511.6074639389462],"error_values":[0,0,0],"ops_per_sec":3542.545492405224,"ops_per_sec_median":3511.6074639389462,"ops_per_sec_stdev":79.78409931011865},"start":"2025-06-18T11:33:13.649Z","end":"2025-06-18T11:34:14.531Z"}},{"name":"MultiUpdate.Uncontended.SingleDoc.Indexed","results":{"1":{"ops_per_sec_values":[3408.1639048396723,3250.149752800592,3340.6022641793143],"error_values":[0,0,0],"ops_per_sec":3332.9719739398593,"ops_per_sec_median":3340.6022641793143,"ops_per_sec_stdev":64.73424677356458},"2":{"ops_per_sec_values":[3477.677247181753,3474.89028055922,3535.758678780217],"error_values":[0,0,0],"ops_per_sec":3496.1087355070636,"ops_per_sec_median":3477.677247181753,"ops_per_sec_stdev":28.05982058521878},"4":{"ops_per_sec_values":[3506.0742546847787,3487.246018306394,3509.6178429442516],"error_values":[0,0,0],"ops_per_sec":3500.9793719784743,"ops_per_sec_median":3506.0742546847787,"ops_per_sec_stdev":9.818112742953156},"8":{"ops_per_sec_values":[3425.4308969039257,3278.590254146693,3458.441082964436],"error_values":[0,0,0],"ops_per_sec":3387.4874113383516,"ops_per_sec_median":3425.4308969039257,"ops_per_sec_stdev":78.17229359671273},"start":"2025-06-18T11:34:14.531Z","end":"2025-06-18T11:35:15.612Z"}}],"errors":[],"basicFields":{"commit":"f4dda329a99811c707eb06d05ad023599f9be263","platform":"deprecated","version":"4.4.29","crudOptions":{"writeConcern":{"j":false},"writeCmdMode":"true","readCmdMode":"false"}},"storageEngine":"wiredTiger","start":"2025-06-18T11:33:13.648Z","end":"2025-06-18T11:35:15.612Z"}
+  @@@RESULTS_END@@@
+  Benchmark complete.
+
+Docker:
+  Starting mongo-perf benchmark for simple_multi_update test case...
+  @@@START@@@
+  MultiUpdate.Uncontended.SingleDoc.NoIndex
+  1	3407.3001235201277
+  1	3297.1950149594404
+  1	3404.021316376216
+  2	3030.967090243601
+  2	2594.9240337528868
+  2	2404.484322310766
+  4	2265.709600138093
+  4	2292.226899825785
+  4	2214.295895054421
+  8	2907.1532775211404
+  8	2987.6328900103695
+  8	2868.8477078200635
+  MultiUpdate.Uncontended.SingleDoc.Indexed
+  1	2739.4822734383984
+  1	2910.550365158497
+  1	2953.056420393345
+  2	2616.3147526406046
+  2	2620.721534141756
+  2	2118.45726888153
+  4	2052.670821462227
+  4	1970.843189356067
+  4	2067.92130822664
+  8	2597.2705917343355
+  8	2699.5609667595872
+  8	2679.3082735266416
+  @@@END@@@
+  @@@RESULTS_START@@@
+  {"results":[{"name":"MultiUpdate.Uncontended.SingleDoc.NoIndex","results":{"1":{"ops_per_sec_values":[3407.3001235201277,3297.1950149594404,3404.021316376216],"error_values":[0,0,0],"ops_per_sec":3369.505484951928,"ops_per_sec_median":3404.021316376216,"ops_per_sec_stdev":51.14874190028256},"2":{"ops_per_sec_values":[3030.967090243601,2594.9240337528868,2404.484322310766],"error_values":[0,0,0],"ops_per_sec":2676.791815435751,"ops_per_sec_median":2594.9240337528868,"ops_per_sec_stdev":262.2300705963518},"4":{"ops_per_sec_values":[2265.709600138093,2292.226899825785,2214.295895054421],"error_values":[0,0,0],"ops_per_sec":2257.4107983394333,"ops_per_sec_median":2265.709600138093,"ops_per_sec_stdev":32.35184651750874},"8":{"ops_per_sec_values":[2907.1532775211404,2987.6328900103695,2868.8477078200635],"error_values":[0,0,0],"ops_per_sec":2921.211291783858,"ops_per_sec_median":2907.1532775211404,"ops_per_sec_stdev":49.50219322248338},"start":"2025-06-18T20:12:29.704Z","end":"2025-06-18T20:13:30.841Z"}},{"name":"MultiUpdate.Uncontended.SingleDoc.Indexed","results":{"1":{"ops_per_sec_values":[2739.4822734383984,2910.550365158497,2953.056420393345],"error_values":[0,0,0],"ops_per_sec":2867.6963529967466,"ops_per_sec_median":2910.550365158497,"ops_per_sec_stdev":92.30683914948322},"2":{"ops_per_sec_values":[2616.3147526406046,2620.721534141756,2118.45726888153],"error_values":[0,0,0],"ops_per_sec":2451.831185221297,"ops_per_sec_median":2616.3147526406046,"ops_per_sec_stdev":235.73782188777017},"4":{"ops_per_sec_values":[2052.670821462227,1970.843189356067,2067.92130822664],"error_values":[0,0,0],"ops_per_sec":2030.4784396816449,"ops_per_sec_median":2052.670821462227,"ops_per_sec_stdev":42.62563116000851},"8":{"ops_per_sec_values":[2597.2705917343355,2699.5609667595872,2679.3082735266416],"error_values":[0,0,0],"ops_per_sec":2658.713277340188,"ops_per_sec_median":2679.3082735266416,"ops_per_sec_stdev":44.226278814310426},"start":"2025-06-18T20:13:30.841Z","end":"2025-06-18T20:14:32.431Z"}}],"errors":[],"basicFields":{"commit":"f4dda329a99811c707eb06d05ad023599f9be263","platform":"deprecated","version":"4.4.29","crudOptions":{"writeConcern":{"j":false},"writeCmdMode":"true","readCmdMode":"false"}},"storageEngine":"wiredTiger","start":"2025-06-18T20:12:29.704Z","end":"2025-06-18T20:14:32.431Z"}
+  @@@RESULTS_END@@@
+  Benchmark complete.
