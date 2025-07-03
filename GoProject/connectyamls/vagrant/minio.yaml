@@ -1,0 +1,3 @@
+name:
+  ssh_connection: "vagrant@localhost:2212"
+  ssh_identity: "/Users/sue/MThesis/vagrant-vms/vm-range/.vagrant/machines/minio/virtualbox/private_key"
