@@ -1,3 +1,0 @@
-name:
-  ssh_connection: "vagrant@localhost:2206"
-  ssh_identity: "/Users/sue/MThesis/vagrant-vms/vm-range/.vagrant/machines/rabbitmq/virtualbox/private_key"

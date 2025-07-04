@@ -1,3 +1,3 @@
 name:
-  ssh_connection: "vagrant@localhost:2202"
-  ssh_identity: "/Users/sue/MThesis/vagrant-vms/vm-range/.vagrant/machines/mongo/virtualbox/private_key"
+  ssh_connection: "vagrant@localhost:2204"
+  ssh_identity: "SPECIFYPATH"

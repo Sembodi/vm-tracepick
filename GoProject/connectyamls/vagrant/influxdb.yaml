@@ -1,3 +1,0 @@
-name:
-  ssh_connection: "vagrant@localhost:2210"
-  ssh_identity: "/Users/sue/MThesis/vagrant-vms/vm-range/.vagrant/machines/influxdb/virtualbox/private_key"

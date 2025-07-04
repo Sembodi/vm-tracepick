@@ -7,9 +7,10 @@
 - `CachedBuild` (false): enable if we do NOT want to measure the build time (disable if we do).
 - `SkipDialogue` (false): enable for batch runs (also make sure the user can do 'sudo /bin/cp' and 'sudo /bin/du' locally without password)
 
+## See INSTALL.md for requirements on local machine!
 
 ## Requirements:
-- Make sure to have the following tools installed on your target vm:
+- Make sure to have the following tools installed on your source vm:
   - `apt update`
   - `apt install bpftrace`
   - `apt install apt-rdepends`
@@ -31,6 +32,7 @@
   - `docker`
   - `du` (evaluation purposes)
   - `python3`
+  - `dot`
 
 - In case you want to create dependency graphs (optional), make sure you have `dot` installed on the local machine.
 

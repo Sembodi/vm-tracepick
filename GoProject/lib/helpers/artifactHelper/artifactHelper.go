@@ -234,8 +234,8 @@ func dockerCOPY(items owntypes.StringSet) owntypes.CommandMap {
 
   items = ownformatters.StripServiceSet(items)
 
-  // EXTRACT general BPF FILES from wrk
-  bpfCmds, bpfneededPaths, bpfServiceMap := bpfcollector.BpfMinimalPathsServiceMap(items) //TODO if item name is found in the path, also include the service in the command, but do this when making the map already (maybe add a field that can be either nil OR have a list/stringset of services inside)
+  // // EXTRACT general BPF FILES from wrk
+  // bpfCmds, bpfneededPaths, bpfServiceMap := bpfcollector.BpfMinimalPathsServiceMap(items) //TODO if item name is found in the path, also include the service in the command, but do this when making the map already (maybe add a field that can be either nil OR have a list/stringset of services inside)
 
   if owntypes.DoTracing {
     etcvarHelper.RetrieveConfigurationFiles(items)
@@ -262,16 +262,16 @@ func dockerCOPY(items owntypes.StringSet) owntypes.CommandMap {
       pathparse.PrintMinimalFolderList(fmt.Sprintf("From BPF (command %s)", bpfCmd), bpfneededPaths[bpfCmd])
     }
 
-    fmt.Println("Pulling bpffiles...")
-    for cmd, _ := range bpfCmds {
-      if services, containsservice := owncheckers.StringPartOfElementOrViceVersa(cmd, items); containsservice {
-        usedBpfCmdsServices[cmd] = ownformatters.MergeStringSets(services, bpfServiceMap[cmd]) //TODO if any item name is found in the path, also include the service in the command
-        fmt.Println("FROM BPF USED: ", cmd, "FOR SERVICES: ")
-        owntypes.PrintStringSet(usedBpfCmdsServices[cmd])
-        fileName := fmt.Sprintf(bpfFormatFileName, cmd)
-        remoterun.RemotePull(bpfneededPaths[cmd], fileName)
-      }
-    }
+    // fmt.Println("Pulling bpffiles...")
+    // for cmd, _ := range bpfCmds {
+    //   if services, containsservice := owncheckers.StringPartOfElementOrViceVersa(cmd, items); containsservice {
+    //     usedBpfCmdsServices[cmd] = ownformatters.MergeStringSets(services, bpfServiceMap[cmd]) //TODO if any item name is found in the path, also include the service in the command
+    //     fmt.Println("FROM BPF USED: ", cmd, "FOR SERVICES: ")
+    //     owntypes.PrintStringSet(usedBpfCmdsServices[cmd])
+    //     fileName := fmt.Sprintf(bpfFormatFileName, cmd)
+    //     remoterun.RemotePull(bpfneededPaths[cmd], fileName)
+    //   }
+    // }
 
     // EXTRACT usr/etc/var files from find-command
     etcneededPaths := etccollector.EtcvarMinimalPaths()
