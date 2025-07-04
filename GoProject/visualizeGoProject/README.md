@@ -1,6 +1,6 @@
 # Once run using `make visualize` and `bin/visualizeGoProject`:
 
-In the go file (visualizeGoProject.go), one can specify in the variable `rootDirs` which project components should be included in the graph.
+In the go file (visualizeGoProject.go), one can specify in the variable `rootDirs` which project components should be included in the graph. 
 
 ## Run dot on it:
 `cd visualizeGoProject/output`
