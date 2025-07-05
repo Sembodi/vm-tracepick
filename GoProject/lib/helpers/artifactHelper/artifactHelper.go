@@ -258,9 +258,9 @@ func dockerCOPY(items owntypes.StringSet) owntypes.CommandMap {
       remoterun.RemotePull(bpfstartneededPaths[item], fileName)
     }
 
-    for bpfCmd, _ := range bpfCmds {
-      pathparse.PrintMinimalFolderList(fmt.Sprintf("From BPF (command %s)", bpfCmd), bpfneededPaths[bpfCmd])
-    }
+    // for bpfCmd, _ := range bpfCmds {
+    //   pathparse.PrintMinimalFolderList(fmt.Sprintf("From BPF (command %s)", bpfCmd), bpfneededPaths[bpfCmd])
+    // }
 
     // fmt.Println("Pulling bpffiles...")
     // for cmd, _ := range bpfCmds {
